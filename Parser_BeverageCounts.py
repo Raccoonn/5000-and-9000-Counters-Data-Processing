@@ -4,9 +4,6 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     '''
     Given a beverage count log file from the 5000S+ or the 9000F this script will
     parse the raw log and write a file of sorted recipes and the number dispensed.
-
-    Rows that I suggest changing in raw data, (Zero indexing on rows):
-        (Row 38) Hot water is written in German with unsupported characters
     '''
 
     f_input = open(filename_rawInput)
