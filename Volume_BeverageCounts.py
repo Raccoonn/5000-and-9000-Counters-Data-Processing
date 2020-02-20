@@ -11,6 +11,15 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
                 - Volume of hot water estimated to 300 mL, have to confirm this
 
     For 9000F:  - Only calculates total 2 liter brewings and Hot Tea volumes
+
+
+    *** NOTICE: - These values of water volume through each machine only include drinks,
+                  it does NOT include the amount of water used in cleaning.
+
+                - Therefore it can be said that these values are an underestimate.
+
+                - I will stress that we have NO confidence interval yet, these values are
+                  a very rough under-estimate currently.
     '''
 
     # All volumes are in milliliters
