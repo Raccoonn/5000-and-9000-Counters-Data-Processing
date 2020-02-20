@@ -7,7 +7,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     For 5000S+: - All drinks are calculated except Iced Coffee and Hot chocolate
                 - Americanos have their own volume designation
                 - All other espresso drinks are calculated by volume of espresso shot
-                for the corresponding drink size.
+                  for the corresponding drink size.
                 - Volume of hot water estimated to 300 mL, have to confirm this
 
     For 9000F:  - Only calculates total 2 liter brewings and Hot Tea volumes
