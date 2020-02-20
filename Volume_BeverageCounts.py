@@ -22,7 +22,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
                 - Therefore it can be said that these values are an underestimate.
 
                 - I will stress that we have NO confidence interval yet, these values are
-                  a very rough under-estimate currently.
+                  a very rough under-estimate of total water usage currently.
     '''
 
     # All volumes are in milliliters
