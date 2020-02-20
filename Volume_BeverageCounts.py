@@ -130,8 +130,5 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
         ' Total: ', round(V_9000/1000, 2), '\n',
         'Daily: ', round(V_9000/1000/DaysOfOperation, 2), '\n'
         ' Weekly: ', round(V_9000/1000/WeeksOfOperaton, 2), '\n')
-    
-
-
-Machine_WaterVolumes('5000S+ Davis Output 2-20-20.csv', '9000F Davis Output 2-20-20.csv', 16)
+   
 
