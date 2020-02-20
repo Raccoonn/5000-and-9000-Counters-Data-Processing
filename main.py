@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     print('\n\n5000/9000 Beverage count parser.\n')
     filename_rawInput = input('\nInput raw data filename:  ')
-    filename_cleanOutput = input('\nInput output filename:  ')
+    filename_cleanOutput = input('\nDefine output filename:  ')
 
     Parse_BeverageCounts(filename_rawInput, filename_cleanOutput)
 
