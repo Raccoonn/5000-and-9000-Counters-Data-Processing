@@ -1,5 +1,5 @@
 # 5000-and-9000-Counters-Data-Processing
-Scripts for cleaning up raw counter data from each machine.  As well as plotting the data if desired.
+Scripts for cleaning up raw counter data from each machine, as well as plotting the data if desired.
 
 
 The raw log file for 5000S+ contains a few weird recipes that I dont know what they are, (Ex.: Caffe Latte, Latte Macchiato, Milk Foam, etc.).  The "Primary Recipes.txt" file is used to filter out these other recipes. 
