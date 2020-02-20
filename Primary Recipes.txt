@@ -8,7 +8,9 @@ Decaf L
 Decaf M
 Decaf S
 Extra Shot S
+Hot Chocolate L
 Hot Chocolate M
+Hot Chocolate S
 Hot Water
 Iced Coffee L
 Iced Coffee M
