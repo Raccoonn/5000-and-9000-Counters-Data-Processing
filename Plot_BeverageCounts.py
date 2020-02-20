@@ -11,6 +11,7 @@ def Plot_BeverageCounts(filename_BeverageCounts):
     # Read in Beverage Data
     f = open(filename_BeverageCounts)
     data = [[i for i in line.split(',')] for line in f.read().splitlines()]
+    f.close()
 
     # Split up drink names and dispensed counts
     labels, counts = [], []
