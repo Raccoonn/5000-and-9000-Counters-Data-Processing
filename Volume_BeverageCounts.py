@@ -3,6 +3,9 @@
 def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     '''
     Function to calculate water volumes used by each machine.
+    
+    Input File: - These files should be the resulting files after parsing the raw
+                  5000/9000 counts.csv files.
 
     For 5000S+: - All drinks are calculated except Iced Coffee and Hot chocolate
                 - Americanos have their own volume designation
