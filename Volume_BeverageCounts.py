@@ -3,14 +3,11 @@
 def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     '''
     Function to calculate water volumes used by each machine.
-    
-    Input File: - These files should be the resulting files after parsing the raw
-                  5000/9000 counts.csv files.
 
     For 5000S+: - All drinks are calculated except Iced Coffee and Hot chocolate
                 - Americanos have their own volume designation
                 - All other espresso drinks are calculated by volume of espresso shot
-                  for the corresponding drink size.
+                for the corresponding drink size.
                 - Volume of hot water estimated to 300 mL, have to confirm this
 
     For 9000F:  - Only calculates total 2 liter brewings and Hot Tea volumes
@@ -22,7 +19,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
                 - Therefore it can be said that these values are an underestimate.
 
                 - I will stress that we have NO confidence interval yet, these values are
-                  a very rough under-estimate of total water usage currently.
+                  a very rough under-estimate currently.
     '''
 
     # All volumes are in milliliters
@@ -117,6 +114,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
 
 
     # Operational Time Period
+    DaysOfOperation = int(DaysOfOperation)
     WeeksOfOperaton = DaysOfOperation/7
 
     # Print Volumes: Total, Weekly, Daily
@@ -130,5 +128,15 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
         ' Total: ', round(V_9000/1000, 2), '\n',
         'Daily: ', round(V_9000/1000/DaysOfOperation, 2), '\n'
         ' Weekly: ', round(V_9000/1000/WeeksOfOperaton, 2), '\n')
-   
+    
+
+
+if __name__ == '__main__':
+
+    filename_5000 = input('\nInput Parsed 5000S+ filename:  ')
+    filename_9000 = input('\nInput Parsed 9000F filename:  ')
+    DaysOfOperation = input('\nInput number of days in operation:  ')
+
+    Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation)
+
 
