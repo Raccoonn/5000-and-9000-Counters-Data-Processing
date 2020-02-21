@@ -120,14 +120,14 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     # Print Volumes: Total, Weekly, Daily
     # Divided by 1000 to convert to Liters
     print('\nWater Usage for 5000S+:\n'
-        ' Total: ', round(V_5000/1000, 2), '\n',
-        'Daily: ', round(V_5000/1000/DaysOfOperation, 2), '\n'
-        ' Weekly: ', round(V_5000/1000/WeeksOfOperaton, 2), '\n')
+        ' Total: ', round(V_5000/1000, 2), 'L\n',
+        'Daily: ', round(V_5000/1000/DaysOfOperation, 2), 'L\n'
+        ' Weekly: ', round(V_5000/1000/WeeksOfOperaton, 2), 'L\n')
 
     print('Water Usage for 9000F:\n'
-        ' Total: ', round(V_9000/1000, 2), '\n',
-        'Daily: ', round(V_9000/1000/DaysOfOperation, 2), '\n'
-        ' Weekly: ', round(V_9000/1000/WeeksOfOperaton, 2), '\n')
+        ' Total: ', round(V_9000/1000, 2), 'L\n',
+        'Daily: ', round(V_9000/1000/DaysOfOperation, 2), 'L\n'
+        ' Weekly: ', round(V_9000/1000/WeeksOfOperaton, 2), 'L\n')
     
 
 
