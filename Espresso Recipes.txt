@@ -1,0 +1,25 @@
+Americano L
+Americano M
+Americano S
+Cappuccino L
+Cappuccino M
+Cappuccino S
+Extra Shot S
+Iced Latte L
+Iced Latte M
+Iced Latte S
+Iced Macchiato L
+Iced Macchiato M
+Iced Macchiato S
+Iced Mocha L
+Iced Mocha M
+Iced Mocha S
+Latte L
+Latte M
+Latte S
+Macchiato L
+Macchiato M
+Macchiato S
+Mocha L
+Mocha M
+Mocha S
