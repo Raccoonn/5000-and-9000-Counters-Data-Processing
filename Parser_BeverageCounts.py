@@ -5,6 +5,9 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     parse the raw log and write a file of sorted recipes and the number dispensed.
     '''
 
+    # .split(';') input data to use indexing for recipe, count.  This works better
+    # than the regex for variable inputs.  Belleview has 5 counts where as Davis has
+    # 4 in each line.  This change broke the regex as it was.
     f_input = open(filename_rawInput)
     data = [line.split(';') for line in f_input.read().splitlines()]
     f_input.close()
