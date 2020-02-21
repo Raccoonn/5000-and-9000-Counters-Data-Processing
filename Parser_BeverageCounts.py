@@ -1,4 +1,3 @@
-import re
 
 def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     '''
@@ -7,7 +6,7 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     '''
 
     f_input = open(filename_rawInput)
-    data = [line for line in f_input.read().splitlines()]
+    data = [line.split(';') for line in f_input.read().splitlines()]
     f_input.close()
 
     # Delete first line which is just a legend, copied here for reference.
@@ -27,7 +26,7 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     # Also removes a space in Decaf M, for some reason there is an extra space
     store = {}
     for line in data:
-        recipe, count = re.search('.*;(.*);(.*);.*;.*;.*;.*', line).groups()
+        recipe, count = line[2], line[3]
         if recipe == 'Decaf  M': recipe = 'Decaf M'
         elif recipe == 'large': recipe = 'Coffee L'
         elif recipe == 'medium': recipe = 'Coffee M'
