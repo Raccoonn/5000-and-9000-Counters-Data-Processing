@@ -3,7 +3,7 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     '''
     Given a beverage count log file from the 5000S+ or the 9000F this script will
     parse the raw log and write a file of sorted recipes and the number dispensed.
-    
+
     2-22-20: I noticed that the 5000S+ Beverage counts has 2 recipes for Decaf L.
              The one with a lower count (5 compared to 125) was being taken instead
              thus giving lower results.
@@ -34,7 +34,7 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     # For the 9000F log Coffee S/M/L are written as 'small', 'medium', 'large'
     # This loop will change them to Coffee 'size' for clarity
     # Also removes a space in Decaf M, for some reason there is an extra space
-    store = {}
+    store = {key : 0 for key in Primary_Recipes}
     for line in data:
         recipe, count = line[2], line[3]     # Index rather than re.search().groups()
         if recipe == 'Decaf  M': recipe = 'Decaf M'
@@ -45,8 +45,7 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
         # If recipe not in "Primary Recipes.txt" it is disregarded
         # If recipe not in store used to filter repeated recipes (Mainly Decaf L has two)
         if recipe in Primary_Recipes:
-            if recipe not in store:
-                store[recipe] = count
+            store[recipe] += int(count)
             
 
     # Sorting keys to make final output look nicer
@@ -55,5 +54,6 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     # Write keys in sorted order with dispense count
     f_output = open(filename_cleanOutput, 'w')
     for key in sort_keys:
-        f_output.write(key + ', ' + store[key] + '\n')
+        if store[key] != 0:
+            f_output.write(key + ', ' + str(store[key]) + '\n')
     f_output.close()
