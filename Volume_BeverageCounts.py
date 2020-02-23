@@ -7,7 +7,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     For 5000S+: - All drinks are calculated except Iced Coffee and Hot chocolate
                 - Americanos have their own volume designation
                 - All other espresso drinks are calculated by volume of espresso shot
-                for the corresponding drink size.
+                  for the corresponding drink size.
                 - Volume of hot water estimated to 300 mL, have to confirm this
 
     For 9000F:  - Only calculates total 2 liter brewings and Hot Tea volumes
@@ -28,6 +28,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     V_Decaf = [300, 400, 500]
     V_Americano = [300, 400, 500]
     V_HotWater = 400
+
 
     # Water volume for 9000F, just include 2 liter brewing
     V_Coffee = 2000
@@ -76,7 +77,9 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
 
         # All Espresso drinks referenced in 'Espresso Recipes.txt'
         elif recipe in Espresso_Recipes:
-            if size == 'L':
+            if recipe == 'Extra Shot S':
+                V_5000 += 46*count
+            elif size == 'L':
                 V_5000 += V_Espresso[2]*count
             elif size == 'M':
                 V_5000 += V_Espresso[1]*count
@@ -119,15 +122,17 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
 
     # Print Volumes: Total, Weekly, Daily
     # Divided by 1000 to convert to Liters
+    V_5000 /= 1000
+    V_9000 /= 1000
     print('\nWater Usage for 5000S+:\n'
-        ' Total: ', round(V_5000/1000, 2), 'L\n',
-        'Daily: ', round(V_5000/1000/DaysOfOperation, 2), 'L\n'
-        ' Weekly: ', round(V_5000/1000/WeeksOfOperaton, 2), 'L\n')
+        ' Total: ', round(V_5000, 2), 'L\n',
+        'Daily: ', round(V_5000/DaysOfOperation, 2), 'L\n'
+        ' Weekly: ', round(V_5000/WeeksOfOperaton, 2), 'L\n')
 
     print('Water Usage for 9000F:\n'
-        ' Total: ', round(V_9000/1000, 2), 'L\n',
-        'Daily: ', round(V_9000/1000/DaysOfOperation, 2), 'L\n'
-        ' Weekly: ', round(V_9000/1000/WeeksOfOperaton, 2), 'L\n')
+        ' Total: ', round(V_9000, 2), 'L\n',
+        'Daily: ', round(V_9000/DaysOfOperation, 2), 'L\n'
+        ' Weekly: ', round(V_9000/WeeksOfOperaton, 2), 'L\n')
     
 
 

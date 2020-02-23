@@ -29,15 +29,17 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     # Also removes a space in Decaf M, for some reason there is an extra space
     store = {}
     for line in data:
-        recipe, count = line[2], line[3]
+        recipe, count = line[2], line[3]     # Index rather than re.search().groups()
         if recipe == 'Decaf  M': recipe = 'Decaf M'
         elif recipe == 'large': recipe = 'Coffee L'
         elif recipe == 'medium': recipe = 'Coffee M'
         elif recipe == 'small': recipe = 'Coffee S'
         
         # If recipe not in "Primary Recipes.txt" it is disregarded
+        # If recipe not in store used to filter repeated recipes (Mainly Decaf L has two)
         if recipe in Primary_Recipes:
-            store[recipe] = count
+            if recipe not in store:
+                store[recipe] = count
             
 
     # Sorting keys to make final output look nicer
