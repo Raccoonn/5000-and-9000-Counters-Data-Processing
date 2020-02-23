@@ -15,7 +15,11 @@ Usage: Simply run main.py and follow command line prompts.
 
 
 
-2-20-2020:
+# 2-20-2020:
 Added Volume_BeverageCounts.py.  This contains a function that uses a cleaned output file, (post parsing), and calculates the total/weekly/daily volume of water used for each machine.
 
 Removed re.search() from Parser_BeverageCounts.py as it was not compatible with other sites log files.  Instead the raw counters are split at each semicolon using .split(';') then recipe, counts are defined by indexing, line[2], line[3].
+
+
+# 2-22-2020:
+I noticed that there are two counters for "Decaf L" in the 5000S+ counters.  The parser was incorrectly taking the lower of the two values and was leading to different results than other sites.  By changing the parser to correctly take the larger of the two recipes my numbers matched up almost exactly with Englewood.  Still waiting to confirm results with Belleview.
