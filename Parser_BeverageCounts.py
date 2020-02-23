@@ -3,13 +3,6 @@ def Parse_BeverageCounts(filename_rawInput, filename_cleanOutput):
     '''
     Given a beverage count log file from the 5000S+ or the 9000F this script will
     parse the raw log and write a file of sorted recipes and the number dispensed.
-
-    2-22-20: I noticed that the 5000S+ Beverage counts has 2 recipes for Decaf L.
-             The one with a lower count (5 compared to 125) was being taken instead
-             thus giving lower results.
-
-             After making sure the script takes the larger of the two my results were
-             much closer to Englewood's calculations.
     '''
 
     # .split(';') input data to use indexing for recipe, count.  This works better
