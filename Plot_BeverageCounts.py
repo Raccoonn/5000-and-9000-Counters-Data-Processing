@@ -47,5 +47,5 @@ def Plot_BeverageCounts(filename_BeverageCounts):
 
     autolabel(rects1)
     fig.tight_layout()
-    plt.show()
+    plt.savefig(filename_BeverageCounts + '.png')
 
