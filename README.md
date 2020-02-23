@@ -22,4 +22,4 @@ Removed re.search() from Parser_BeverageCounts.py as it was not compatible with 
 
 
 # 2-22-2020:
-I noticed that there are two lines for "Decaf L" in the 5000S+ counters.  The parser was incorrectly taking the lower of the two values and was leading to different results than other sites.  By changing the parser to correctly take the larger of the two recipes my numbers matched up almost exactly with Englewood.  Still waiting to confirm results with Belleview.
+I noticed that there are two lines for "Decaf L" in the 5000S+ counters.  The parser was incorrectly taking the lower of the two values and was leading to different results than other sites.  Now in parser the store dictionary stores an increasing integer rather than a string cause the value to be over written.
