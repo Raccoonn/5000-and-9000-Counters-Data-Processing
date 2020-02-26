@@ -1,10 +1,9 @@
 # 5000-and-9000-Counters-Data-Processing
 Scripts for cleaning up raw counter data from each machine, as well as plotting the data if desired.
 
+Ensure log files are in the current directory or specify full file path when inputting the filenames.  Output will be written to the current directory.
 
-The raw log file for 5000S+ contains a few tes recipes and other weird recipes that I dont know what they are, (Ex.: Milk Foam, Caffe Latte, Latte Macchiato, etc.).  The "Primary Recipes.txt" file is used to filter out these other recipes. 
-
-Ensure log files are in the same directory or specify full file path when inputting the filenames.  Output will be written to the current directory.
+The raw log file for 5000S+ contains a few test recipes and other weird recipes that I dont know what they are, (Ex.: Milk Foam, Caffe Latte, Latte Macchiato, etc.).  The "Primary Recipes.txt" file is used to filter out these other recipes.  The "Espresso Recipes.txt" file is used for filtering espresso drinks when calculating water usage for the 5000S+.  Ensure these files are located in the working directory.
 
 
 Usage: Simply run main.py and follow command line prompts.
