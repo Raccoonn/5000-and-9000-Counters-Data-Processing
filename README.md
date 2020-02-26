@@ -4,6 +4,8 @@ Scripts for cleaning up raw counter data from each machine, as well as plotting 
 
 The raw log file for 5000S+ contains a few tes recipes and other weird recipes that I dont know what they are, (Ex.: Milk Foam, Caffe Latte, Latte Macchiato, etc.).  The "Primary Recipes.txt" file is used to filter out these other recipes. 
 
+Ensure log files are in the same directory or specify full file path when inputting the filenames.  Output will be written to the current directory.
+
 
 Usage: Simply run main.py and follow command line prompts.
   - Input raw log filename
@@ -28,3 +30,5 @@ I noticed that there are two lines for "Decaf L" in the 5000S+ counters.  Change
 
 # 2-26-2020:
 Modified Plot_BeverageCounts.py to use a log scale.  My intention is to account for the larger Iced Coffee beverage counts on the 5000S+ skewing the perspective of the plot.
+
+Updated main.py to include water estimation and to process both machines in a single go rather than running the script for each machine.
