@@ -8,9 +8,12 @@ The raw log file for 5000S+ contains a few tes recipes and other weird recipes t
 Usage: Simply run main.py and follow command line prompts.
   - Input raw log filename
   - Input desired output filename
+  - Script will write Output files to current directory (Can be used for Volume_BeverageCounts.py - See Below)
   - Plot data if desired
 
-
+For calculating water usage of machine run Volume_BeverageCounts.py and follow command line prompts.
+  - Input output filenames for 5000S+ and 9000F (These are created by using main.py)
+  - Output is a formatted print statement showing Total, Weekly, Daily water usage for each machine.
 
 
 # 2-20-2020:
