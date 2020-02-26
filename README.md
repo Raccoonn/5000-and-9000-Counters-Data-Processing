@@ -24,4 +24,4 @@ I noticed that there are two lines for "Decaf L" in the 5000S+ counters.  Change
 
 
 # 2-26-2020:
-Modified Plot_BeverageCounts.py to use a log scale.  My intention is to account for the larger Iced Coffee beverage counts on the 5000S+ from skewing the perspective of the plot.
+Modified Plot_BeverageCounts.py to use a log scale.  My intention is to account for the larger Iced Coffee beverage counts on the 5000S+ skewing the perspective of the plot.
