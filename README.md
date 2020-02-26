@@ -21,3 +21,7 @@ Removed re.search() from Parser_BeverageCounts.py as it was not compatible with 
 
 # 2-22-2020:
 I noticed that there are two lines for "Decaf L" in the 5000S+ counters.  Changed store in parser to better handle multiple recipes.
+
+
+# 2-26-2020:
+Modified Plot_BeverageCounts.py to use a log scale.  My intention is to account for the larger Iced Coffee beverage counts on the 5000S+ from skewing the perspective of the plot.
