@@ -1,5 +1,5 @@
 # 5000-and-9000-Counters-Data-Processing
-Scripts for cleaning up raw counter data from each machine, as well as plotting the data if desired.
+Scripts for cleaning up raw counter data from each machine, as well as plotting the data and estimating water usage if desired.
 
 Ensure log files are in the current directory or specify full file path when inputting the filenames.  Output will be written to the working directory.
 
