@@ -6,6 +6,9 @@ if __name__ == '__main__':
     '''
     Command line interface to produce clean counter logs and plot if desired.
     
+    Ensure that you specify file type for input and output files.
+        - Example: (input.csv, output.csv) or (input.txt, output.txt)
+    
     This script can also calculate estimated water volume usage for each machine
     based on the beverage count data.
     '''
