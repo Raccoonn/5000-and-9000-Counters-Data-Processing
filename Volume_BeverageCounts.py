@@ -134,14 +134,3 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
         'Daily: ', round(V_9000/DaysOfOperation, 2), 'L\n'
         ' Weekly: ', round(V_9000/WeeksOfOperaton, 2), 'L\n')
     
-
-
-if __name__ == '__main__':
-
-    filename_5000 = input('\nInput Parsed 5000S+ filename:  ')
-    filename_9000 = input('\nInput Parsed 9000F filename:  ')
-    DaysOfOperation = input('\nInput number of days in operation:  ')
-
-    Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation)
-
-
