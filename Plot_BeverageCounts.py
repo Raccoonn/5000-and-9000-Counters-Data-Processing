@@ -29,8 +29,9 @@ def Plot_BeverageCounts(filename_BeverageCounts):
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_title('Counts of Dispensed Drinks')
     ax.set_xticks(x)
-    ax.set_yticklabels([])
     ax.set_xticklabels(labels, rotation=90, size='xx-small')
+    ax.set_yticklabels([])
+    plt.yscale('log')
 
 
     def autolabel(rects):
