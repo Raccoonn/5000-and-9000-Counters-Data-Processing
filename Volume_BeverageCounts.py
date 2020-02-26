@@ -53,6 +53,7 @@ def Machine_WaterVolumes(filename_5000, filename_9000, DaysOfOperation):
     # calculate all drinks for 5000S+ except Iced Coffee and Hot Chocolate
     # Initialize volume counter for 5000S+
     V_5000 = 0
+    
     for recipe, count in data_5000:
         size = recipe[-1]   # Pull size from end of recipe string
         count = int(count)  # Convert count from str to int
